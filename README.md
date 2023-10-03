@@ -1,0 +1,1 @@
+Introductory-level challenge project for determining weighted grades with C#
