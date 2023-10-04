@@ -96,6 +96,7 @@ foreach (string name in studentNames)
     currentStudentGrade = (decimal)sumAssignmentScores / examAssignments;
     examScore = (decimal)sumExamScores / 5;
     extraCredit = (decimal)sumExtraCredit / extraCreditTracker;
+    decimal extraPoints = currentStudentGrade - examScore;
 
     if (currentStudentGrade >= 97)
         currentStudentLetterGrade = "A+";
@@ -139,7 +140,7 @@ foreach (string name in studentNames)
     // Student         Grade
     // Sophia:         92.2    A-
     
-    Console.WriteLine($"{currentStudent}\t\t{examScore}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t{extraCredit}");
+    Console.WriteLine($"{currentStudent}\t\t{examScore}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t{extraCredit} ({extraPoints})");
 }
 
 // required for running in VS Code (keeps the Output windows open to view results)
